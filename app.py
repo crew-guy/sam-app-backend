@@ -4,6 +4,7 @@ import numpy as np
 import onnxruntime as ort
 import cv2
 import io
+import json
 from flask_cors import CORS
 
 
@@ -22,6 +23,16 @@ def home():
     return "Hello, Flask!"
 
 
+# Convert the NumPy array to a list manually
+def convert_numpy_array_to_list(np_array):
+    if isinstance(np_array, np.ndarray):
+        return [convert_numpy_array_to_list(item) for item in np_array]
+    elif isinstance(np_array, np.float32):
+        return float(np_array)  # Convert float32 to regular float
+    else:
+        return np_array
+
+
 def get_image_embedding(image_data):
     # Read image data using OpenCV
     img_array = np.asarray(bytearray(image_data), dtype=np.uint8)
@@ -31,7 +42,7 @@ def get_image_embedding(image_data):
     # Resize image to match the model's expected input size
     dimension = 1024
     height, width = img.shape[:2]
-    img = cv2.resize(img, (dimension, int(dimension * height / width)))
+    img = cv2.resize(img, (dimension, 684))
 
     # Ensure the image is in RGB (OpenCV loads images in BGR)
 
@@ -43,7 +54,7 @@ def get_image_embedding(image_data):
     # if len(np_image.shape) == 4 and np_image.shape[0] == 1:
     #     np_image = np.squeeze(np_image, axis=0)
 
-    print(np_image.shape)
+    print("resized image shape", np_image.shape)
     # img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 
     # Create ONNX runtime input
@@ -53,9 +64,8 @@ def get_image_embedding(image_data):
     feeds = {'input_image': ort_tensor}
     results = session.run(None, feeds)
 
-    # Get the embeddings
-    image_embeddings = results[0]
-    return image_embeddings
+    # Return the embeddings
+    return results[0]
 
 
 @app.route('/convert-image-to-embeddings', methods=['POST'])
@@ -69,13 +79,9 @@ def image_to_embedding_converter():
     if file:
         # Get the embeddings for the image
         image_embeddings = get_image_embedding(file.read())
-
-        # Prepare and send the response
-        response = {
-            'statusCode': 200,
-            'imageEmbeddings': image_embeddings.tolist()
-        }
-        return jsonify(response), 200
+        print(image_embeddings.shape)
+        image_embeddings_list = convert_numpy_array_to_list(image_embeddings)
+        return json.dumps(image_embeddings_list), 200
 
 
 if __name__ == '__main__':
