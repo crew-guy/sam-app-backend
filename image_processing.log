@@ -1,0 +1,340 @@
+2023-11-09 07:55:18,469:INFO:---
+Processing started for image of size::(3024, 3024, 3)
+---
+2023-11-09 07:55:18,475:INFO:---
+Image data tensor shape after conversion::(1024, 3, 684)
+---
+2023-11-09 07:55:38,903:INFO:---
+Encoding result obtained::(1, 256, 64, 64)
+---
+2023-11-09 07:55:45,073:INFO:127.0.0.1 - - [09/Nov/2023 07:55:45] "POST /convert-image-to-embeddings HTTP/1.1" 200 -
+2023-11-14 07:42:00,160:INFO:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-11-14 07:42:00,160:INFO:[33mPress CTRL+C to quit[0m
+2023-11-16 10:13:55,826:INFO:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-11-16 10:13:55,827:INFO:[33mPress CTRL+C to quit[0m
+2023-11-16 11:58:05,189:INFO:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-11-16 11:58:05,191:INFO:[33mPress CTRL+C to quit[0m
+2023-11-16 11:58:27,154:INFO:---
+Processing started for image of size::(3024, 3024, 3)
+---
+2023-11-16 11:58:27,155:ERROR:Error occurred while processing image::Object of type ndarray is not JSON serializable
+2023-11-16 11:58:27,158:INFO:127.0.0.1 - - [16/Nov/2023 11:58:27] "[35m[1mPOST /convert-image-to-embeddings HTTP/1.1[0m" 500 -
+2023-11-16 11:58:27,193:ERROR:Error on request:
+Traceback (most recent call last):
+  File "/Users/ankitsanghvi/Desktop/sam-app-backend/samb-env/lib/python3.11/site-packages/werkzeug/serving.py", line 362, in run_wsgi
+    execute(self.server.app)
+  File "/Users/ankitsanghvi/Desktop/sam-app-backend/samb-env/lib/python3.11/site-packages/werkzeug/serving.py", line 323, in execute
+    application_iter = app(environ, start_response)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ankitsanghvi/Desktop/sam-app-backend/samb-env/lib/python3.11/site-packages/flask/app.py", line 1478, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ankitsanghvi/Desktop/sam-app-backend/samb-env/lib/python3.11/site-packages/flask/app.py", line 1458, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ankitsanghvi/Desktop/sam-app-backend/samb-env/lib/python3.11/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ankitsanghvi/Desktop/sam-app-backend/samb-env/lib/python3.11/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ankitsanghvi/Desktop/sam-app-backend/samb-env/lib/python3.11/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ankitsanghvi/Desktop/sam-app-backend/samb-env/lib/python3.11/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ankitsanghvi/Desktop/sam-app-backend/samb-env/lib/python3.11/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ankitsanghvi/Desktop/sam-app-backend/samb-env/lib/python3.11/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ankitsanghvi/Desktop/sam-app-backend/app.py", line 115, in image_to_embedding_converter
+    'imageEmbeddings': image_embeddings.tolist()
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'tolist'
+2023-11-16 11:58:45,506:INFO:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-11-16 11:58:45,507:INFO:[33mPress CTRL+C to quit[0m
+2023-11-16 11:58:52,868:INFO:---
+Processing started for image of size::(3024, 3024, 3)
+---
+2023-11-16 11:58:52,872:ERROR:Error occurred while processing image::Object of type ndarray is not JSON serializable
+2023-11-16 11:58:52,877:INFO:127.0.0.1 - - [16/Nov/2023 11:58:52] "[35m[1mPOST /convert-image-to-embeddings HTTP/1.1[0m" 500 -
+2023-11-16 11:58:52,931:ERROR:Error on request:
+Traceback (most recent call last):
+  File "/Users/ankitsanghvi/Desktop/sam-app-backend/samb-env/lib/python3.11/site-packages/werkzeug/serving.py", line 362, in run_wsgi
+    execute(self.server.app)
+  File "/Users/ankitsanghvi/Desktop/sam-app-backend/samb-env/lib/python3.11/site-packages/werkzeug/serving.py", line 323, in execute
+    application_iter = app(environ, start_response)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ankitsanghvi/Desktop/sam-app-backend/samb-env/lib/python3.11/site-packages/flask/app.py", line 1478, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ankitsanghvi/Desktop/sam-app-backend/samb-env/lib/python3.11/site-packages/flask/app.py", line 1458, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ankitsanghvi/Desktop/sam-app-backend/samb-env/lib/python3.11/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ankitsanghvi/Desktop/sam-app-backend/samb-env/lib/python3.11/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ankitsanghvi/Desktop/sam-app-backend/samb-env/lib/python3.11/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ankitsanghvi/Desktop/sam-app-backend/samb-env/lib/python3.11/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ankitsanghvi/Desktop/sam-app-backend/samb-env/lib/python3.11/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ankitsanghvi/Desktop/sam-app-backend/samb-env/lib/python3.11/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ankitsanghvi/Desktop/sam-app-backend/app.py", line 115, in image_to_embedding_converter
+    'imageEmbeddings': image_embeddings.tolist()
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'tolist'
+2023-11-16 11:59:50,344:INFO:---
+Processing started for image of size::(3024, 3024, 3)
+---
+2023-11-16 11:59:50,347:ERROR:Error occurred while processing image::Object of type ndarray is not JSON serializable
+2023-11-16 11:59:50,361:INFO:127.0.0.1 - - [16/Nov/2023 11:59:50] "[35m[1mPOST /convert-image-to-embeddings HTTP/1.1[0m" 500 -
+2023-11-16 11:59:50,365:ERROR:Error on request:
+Traceback (most recent call last):
+  File "/Users/ankitsanghvi/Desktop/sam-app-backend/samb-env/lib/python3.11/site-packages/werkzeug/serving.py", line 362, in run_wsgi
+    execute(self.server.app)
+  File "/Users/ankitsanghvi/Desktop/sam-app-backend/samb-env/lib/python3.11/site-packages/werkzeug/serving.py", line 323, in execute
+    application_iter = app(environ, start_response)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ankitsanghvi/Desktop/sam-app-backend/samb-env/lib/python3.11/site-packages/flask/app.py", line 1478, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ankitsanghvi/Desktop/sam-app-backend/samb-env/lib/python3.11/site-packages/flask/app.py", line 1458, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ankitsanghvi/Desktop/sam-app-backend/samb-env/lib/python3.11/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ankitsanghvi/Desktop/sam-app-backend/samb-env/lib/python3.11/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ankitsanghvi/Desktop/sam-app-backend/samb-env/lib/python3.11/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ankitsanghvi/Desktop/sam-app-backend/samb-env/lib/python3.11/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ankitsanghvi/Desktop/sam-app-backend/samb-env/lib/python3.11/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ankitsanghvi/Desktop/sam-app-backend/samb-env/lib/python3.11/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ankitsanghvi/Desktop/sam-app-backend/app.py", line 115, in image_to_embedding_converter
+    'imageEmbeddings': image_embeddings.tolist()
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'tolist'
+2023-11-16 12:01:36,841:INFO:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-11-16 12:01:36,843:INFO:[33mPress CTRL+C to quit[0m
+2023-11-16 12:01:46,801:INFO:---
+Processing started for image of size::(3024, 3024, 3)
+---
+2023-11-16 12:02:47,618:INFO:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-11-16 12:02:47,620:INFO:[33mPress CTRL+C to quit[0m
+2023-11-16 12:02:52,684:INFO:---
+Processing started for image of size::(3024, 3024, 3)
+---
+2023-11-16 12:05:08,887:INFO:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-11-16 12:05:08,888:INFO:[33mPress CTRL+C to quit[0m
+2023-11-16 12:05:34,257:INFO:---
+Processing started for image of size::(3024, 3024, 3)
+---
+2023-11-16 12:08:43,672:INFO:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-11-16 12:08:43,673:INFO:[33mPress CTRL+C to quit[0m
+2023-11-16 12:08:46,418:INFO:---
+Processing started for image of size::(431, 500, 3)
+---
+2023-11-16 12:09:31,705:INFO:---
+Image data tensor shape after conversion::(1024, 3, 684)
+---
+2023-11-16 12:10:21,210:INFO:---
+Encoding result obtained::(1, 256, 64, 64)
+---
+2023-11-16 12:10:27,526:INFO:127.0.0.1 - - [16/Nov/2023 12:10:27] "POST /convert-image-to-embeddings HTTP/1.1" 200 -
+2023-11-17 06:56:24,199:INFO:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-11-17 06:56:24,202:INFO:[33mPress CTRL+C to quit[0m
+2023-11-17 07:42:40,510:INFO:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-11-17 07:42:40,511:INFO:[33mPress CTRL+C to quit[0m
+2023-11-17 07:42:46,603:INFO:---
+Processing started for image of size::(3024, 3024, 3)
+---
+2023-11-17 07:44:41,154:INFO:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-11-17 07:44:41,154:INFO:[33mPress CTRL+C to quit[0m
+2023-11-17 07:44:52,093:INFO:---
+Processing started for image of size::(3024, 3024, 3)
+---
+2023-11-17 07:46:21,414:INFO:---
+Processing started for image of size::(431, 500, 3)
+---
+2023-11-17 07:48:06,431:INFO:---
+Image data tensor shape after conversion::(1024, 3, 684)
+---
+2023-11-17 07:51:39,749:INFO:---
+Encoding result obtained::(1, 256, 64, 64)
+---
+2023-11-17 07:51:50,571:INFO:127.0.0.1 - - [17/Nov/2023 07:51:50] "POST /convert-image-to-embeddings HTTP/1.1" 200 -
+2023-11-17 07:51:53,411:INFO:---
+Image data tensor shape after conversion::(1024, 3, 684)
+---
+2023-11-17 07:53:15,761:INFO:---
+Encoding result obtained::(1, 256, 64, 64)
+---
+2023-11-17 07:53:21,903:INFO:127.0.0.1 - - [17/Nov/2023 07:53:21] "POST /convert-image-to-embeddings HTTP/1.1" 200 -
+2023-11-17 07:57:49,229:INFO:---
+Processing started for image of size::(431, 500, 3)
+---
+2023-11-17 07:58:19,165:INFO:---
+Image data tensor shape after conversion::(1024, 3, 684)
+---
+2023-11-17 07:59:03,426:INFO:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-11-17 07:59:03,427:INFO:[33mPress CTRL+C to quit[0m
+2023-11-17 08:01:16,081:INFO:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-11-17 08:01:16,081:INFO:[33mPress CTRL+C to quit[0m
+2023-11-17 08:01:49,800:INFO:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-11-17 08:01:49,801:INFO:[33mPress CTRL+C to quit[0m
+2023-11-17 08:02:45,654:ERROR:Error occurred while processing image::'Image' object has no attribute 'shape'
+2023-11-17 08:02:45,667:INFO:127.0.0.1 - - [17/Nov/2023 08:02:45] "[35m[1mPOST /convert-image-to-embeddings HTTP/1.1[0m" 500 -
+2023-11-17 08:02:45,710:ERROR:Error on request:
+Traceback (most recent call last):
+  File "/Users/ankitsanghvi/Desktop/sam-app-backend/samb-env/lib/python3.11/site-packages/werkzeug/serving.py", line 362, in run_wsgi
+    execute(self.server.app)
+  File "/Users/ankitsanghvi/Desktop/sam-app-backend/samb-env/lib/python3.11/site-packages/werkzeug/serving.py", line 323, in execute
+    application_iter = app(environ, start_response)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ankitsanghvi/Desktop/sam-app-backend/samb-env/lib/python3.11/site-packages/flask/app.py", line 1478, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ankitsanghvi/Desktop/sam-app-backend/samb-env/lib/python3.11/site-packages/flask/app.py", line 1458, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ankitsanghvi/Desktop/sam-app-backend/samb-env/lib/python3.11/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ankitsanghvi/Desktop/sam-app-backend/samb-env/lib/python3.11/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ankitsanghvi/Desktop/sam-app-backend/samb-env/lib/python3.11/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ankitsanghvi/Desktop/sam-app-backend/samb-env/lib/python3.11/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ankitsanghvi/Desktop/sam-app-backend/samb-env/lib/python3.11/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ankitsanghvi/Desktop/sam-app-backend/samb-env/lib/python3.11/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ankitsanghvi/Desktop/sam-app-backend/app.py", line 118, in image_to_embedding_converter
+    'imageEmbeddings': image_embeddings.tolist()
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'tolist'
+2023-11-17 08:06:23,610:INFO:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-11-17 08:06:23,617:INFO:[33mPress CTRL+C to quit[0m
+2023-11-17 08:06:36,677:ERROR:Error occurred while processing image::'Image' object has no attribute 'shape'
+2023-11-17 08:06:36,680:INFO:127.0.0.1 - - [17/Nov/2023 08:06:36] "[35m[1mPOST /convert-image-to-embeddings HTTP/1.1[0m" 500 -
+2023-11-17 08:06:36,712:ERROR:Error on request:
+Traceback (most recent call last):
+  File "/Users/ankitsanghvi/Desktop/sam-app-backend/samb-env/lib/python3.11/site-packages/werkzeug/serving.py", line 362, in run_wsgi
+    execute(self.server.app)
+  File "/Users/ankitsanghvi/Desktop/sam-app-backend/samb-env/lib/python3.11/site-packages/werkzeug/serving.py", line 323, in execute
+    application_iter = app(environ, start_response)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ankitsanghvi/Desktop/sam-app-backend/samb-env/lib/python3.11/site-packages/flask/app.py", line 1478, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ankitsanghvi/Desktop/sam-app-backend/samb-env/lib/python3.11/site-packages/flask/app.py", line 1458, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ankitsanghvi/Desktop/sam-app-backend/samb-env/lib/python3.11/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ankitsanghvi/Desktop/sam-app-backend/samb-env/lib/python3.11/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ankitsanghvi/Desktop/sam-app-backend/samb-env/lib/python3.11/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ankitsanghvi/Desktop/sam-app-backend/samb-env/lib/python3.11/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ankitsanghvi/Desktop/sam-app-backend/samb-env/lib/python3.11/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ankitsanghvi/Desktop/sam-app-backend/samb-env/lib/python3.11/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ankitsanghvi/Desktop/sam-app-backend/app.py", line 118, in image_to_embedding_converter
+    'imageEmbeddings': image_embeddings.tolist()
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'tolist'
+2023-11-17 08:07:07,611:INFO:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-11-17 08:07:07,612:INFO:[33mPress CTRL+C to quit[0m
+2023-11-17 08:08:30,460:INFO:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-11-17 08:08:30,462:INFO:[33mPress CTRL+C to quit[0m
+2023-11-17 08:08:54,757:ERROR:Error occurred while processing image::[ONNXRuntimeError] : 2 : INVALID_ARGUMENT : Unexpected input data type. Actual: (tensor(uint8)) , expected: (tensor(float))
+2023-11-17 08:08:54,763:INFO:127.0.0.1 - - [17/Nov/2023 08:08:54] "[35m[1mPOST /convert-image-to-embeddings HTTP/1.1[0m" 500 -
+2023-11-17 08:08:54,827:ERROR:Error on request:
+Traceback (most recent call last):
+  File "/Users/ankitsanghvi/Desktop/sam-app-backend/samb-env/lib/python3.11/site-packages/werkzeug/serving.py", line 362, in run_wsgi
+    execute(self.server.app)
+  File "/Users/ankitsanghvi/Desktop/sam-app-backend/samb-env/lib/python3.11/site-packages/werkzeug/serving.py", line 323, in execute
+    application_iter = app(environ, start_response)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ankitsanghvi/Desktop/sam-app-backend/samb-env/lib/python3.11/site-packages/flask/app.py", line 1478, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ankitsanghvi/Desktop/sam-app-backend/samb-env/lib/python3.11/site-packages/flask/app.py", line 1458, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ankitsanghvi/Desktop/sam-app-backend/samb-env/lib/python3.11/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ankitsanghvi/Desktop/sam-app-backend/samb-env/lib/python3.11/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ankitsanghvi/Desktop/sam-app-backend/samb-env/lib/python3.11/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ankitsanghvi/Desktop/sam-app-backend/samb-env/lib/python3.11/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ankitsanghvi/Desktop/sam-app-backend/samb-env/lib/python3.11/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ankitsanghvi/Desktop/sam-app-backend/samb-env/lib/python3.11/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ankitsanghvi/Desktop/sam-app-backend/app.py", line 119, in image_to_embedding_converter
+    'imageEmbeddings': image_embeddings.tolist()
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'tolist'
